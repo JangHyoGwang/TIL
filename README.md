@@ -11,7 +11,7 @@
 
 # 프로그래밍 언어
 
--JAVA[](/.JAVA)   
+-JAVA[](/.JAVA.md)   
 
 -PYTHON[](/.작성법)   
 
