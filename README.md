@@ -10,5 +10,5 @@
 
 
 # 언어
-[JAVA]   
-[PYTHON]
+[JAVA]()   
+[PYTHON]()
