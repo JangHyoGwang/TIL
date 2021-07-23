@@ -16,5 +16,5 @@
 
 객체 배열 등.
 
-![1(alt)](./img/1.jpg)
+![1(alt)](https://github.com/JangHyoGwang/TIL/blob/main/1.JPG)
 
