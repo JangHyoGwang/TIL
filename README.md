@@ -12,6 +12,6 @@
 # 프로그래밍 언어
 
 -JAVA[](/.https://github.com/JangHyoGwang/TIL/issues/1#issue-951196110)   
-
+![Alt text](/path/to/img.jpg)
 -PYTHON[](/.작성법)   
 
