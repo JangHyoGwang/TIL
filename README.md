@@ -11,7 +11,7 @@
 
 # 프로그래밍 언어
 
--JAVA[](/. welcome.txt)   
+-JAVA[](/.welcome.txt)   
 
 -PYTHON[](/.작성법)   
 
