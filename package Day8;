@@ -79,11 +79,11 @@ public class CollectionEx1 {
         });
         
         // size : list의 전체 개수,  배열에서 length와 같은 의미
-        ```java
+        
         for(int i=0; i<list3.size(); i++) {
             System.out.print(list3.get(i) + " ");
         }
-        ```
+        
         System.out.println();  // 줄바꿈용
         
         /* Iterator를 이용한 list값 확인 (번지가 아닌 값을 이용하여 출력)
