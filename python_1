@@ -491,9 +491,9 @@ print( hex(id(arr2D[0])))
 import copy
 other = copy.deepcopy(arr2D)
 
-'''python
+
 print( hex(id(other)))
 print( hex(id(arr2D)))
 print( hex(id(other[0])))
 print( hex(id(arr2D[0])))
-'''
+
