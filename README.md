@@ -15,6 +15,6 @@
 [CollectionEx1](https://github.com/JangHyoGwang/TIL/blob/main/package%20Day8.md)   
 
 -PYTHON   
- -[파이썬 인터프리터의 이해](https://github.com/JangHyoGwang/TIL/blob/main/%ED%8C%8C%EC%9D%B4%EC%8D%AC%20%EC%9D%B8%ED%84%B0%ED%94%84%EB%A6%AC%ED%84%B0.ipynb)   
- -[제어문과 함수](https://github.com/JangHyoGwang/TIL/blob/main/%EC%A0%9C%EC%96%B4%EB%AC%B8%EA%B3%BC%20%ED%95%A8%EC%88%98.ipynb)   
+  -[파이썬 인터프리터의 이해](https://github.com/JangHyoGwang/TIL/blob/main/%ED%8C%8C%EC%9D%B4%EC%8D%AC%20%EC%9D%B8%ED%84%B0%ED%94%84%EB%A6%AC%ED%84%B0.ipynb)   
+  -[제어문과 함수](https://github.com/JangHyoGwang/TIL/blob/main/%EC%A0%9C%EC%96%B4%EB%AC%B8%EA%B3%BC%20%ED%95%A8%EC%88%98.ipynb)   
 
