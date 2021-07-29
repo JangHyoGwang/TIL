@@ -12,7 +12,7 @@
 # 프로그래밍 언어
 
 -JAVA   
- Day_1
+ [Day_1](https://github.com/JangHyoGwang/TIL/blob/main/Java/Day_01.md)
 
 -PYTHON   
 [파이썬 인터프리터의 이해](https://github.com/JangHyoGwang/TIL/blob/main/%ED%8C%8C%EC%9D%B4%EC%8D%AC%20%EC%9D%B8%ED%84%B0%ED%94%84%EB%A6%AC%ED%84%B0.ipynb)   
