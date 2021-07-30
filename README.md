@@ -12,7 +12,7 @@
 # 프로그래밍 언어
 
 -JAVA   
- [Day_01](https://github.com/JangHyoGwang/TIL/blob/main/Java/Day_01.md)
+ [Day_01](https://github.com/JangHyoGwang/TIL/blob/main/Java/Day_01.md)   
  [Day_02](https://github.com/JangHyoGwang/TIL/blob/main/Java/Day_02.md)   
 
 -PYTHON   
