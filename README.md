@@ -13,11 +13,15 @@
 
 -JAVA 
  - [문제풀이](https://github.com/JangHyoGwang/TIL/blob/main/Java/%EB%AC%B8%EC%A0%9C%ED%92%80%EC%9D%B4.md)
+ 
  - [Day_01](https://github.com/JangHyoGwang/TIL/blob/main/Java/Day_01.md)   
+ 
  - [Day_02](https://github.com/JangHyoGwang/TIL/blob/main/Java/Day_02.md)   
       
 
 -PYTHON   
+- [문제 풀이](https://github.com/JangHyoGwang/TIL/blob/main/Python/%EB%AC%B8%EC%A0%9C%ED%92%80%EC%9D%B4.md)
+ 
 - [파이썬 인터프리터의 이해](https://github.com/JangHyoGwang/TIL/blob/main/%ED%8C%8C%EC%9D%B4%EC%8D%AC%20%EC%9D%B8%ED%84%B0%ED%94%84%EB%A6%AC%ED%84%B0.ipynb)   
 
 - [제어문과 함수](https://github.com/JangHyoGwang/TIL/blob/main/%EC%A0%9C%EC%96%B4%EB%AC%B8%EA%B3%BC%20%ED%95%A8%EC%88%98.ipynb)    
