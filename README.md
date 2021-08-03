@@ -32,4 +32,4 @@
 
 - [파이썬의 자료구조](https://github.com/JangHyoGwang/TIL/blob/main/Python/%ED%8C%8C%EC%9D%B4%EC%8D%AC%EC%9D%98%20%EC%9E%90%EB%A3%8C%EA%B5%AC%EC%A1%B0.ipynb)   
 
-[이미지](WeChat Image_20210802091654)
+[이미지](WeChat Image_20210802091654.jpg)
