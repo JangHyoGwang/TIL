@@ -1,4 +1,4 @@
-# InputStream과 메소드
+# 《 InputStream과 메소드 》
 
 ![메소드](https://github.com/JangHyoGwang/TIL/blob/main/Java/12.JPG)
 
@@ -6,7 +6,7 @@
 - 모든 바이트 기반 입력 스트림은 InputStream 클래스를 상속받아서 만들어진다.   
 - InputStream 클래스의 주요 메소드는 다음과 같다.
 
-|리턴타입|메소드|설명|
+|리턴 타입|메소드|설명|
 |--------|-------|------|
 |int|read()|입력 스트림으로부터 1 byte를 읽고 읽은 바이트를 리턴|
 |int|read(byte[]b)|입력 스트림으로부터 읽은 바이트들을 매개값으로 주어진 바이트 배열 b에 저장하고 실제로 읽은 바이트 수를 리턴|
@@ -54,16 +54,56 @@ while ((readByte = is.read()) != -1) { ... }
 
 # 《 OutputStream과 메소드 》
 
+![메소드](https://github.com/JangHyoGwang/TIL/blob/main/Java/23.JPG)
+
+- OutputStream은 바이트 기반 출력 스트림의 최상위 추상 클래스이다.
+모든 바이트 기반 출력 스트림은 OutputStream 클래스를 상속받아서 만들어진다.
+OutputStream 클래스의 주요 메소드는 다음과 같다.
+
+|리턴 타입|메소드|설명|
+|--------------|-------|------|
+|void|write(int b)|출력 스트림으로 1 byte를 보냄(b의 끝 1 byte)|
+|void|write(byte[] b)|출력 스트림으로 주어진 바이트 배열 b의 모든 바이트를 보냄|
+|void|write(byte[] b, int off, int len)|출력 스트림으로 주어진 바이트 배열 b[off]부터 len 개까지의 바이트를 보냄|
+|void|flush()|버퍼에 잔류하는 모든 바이트를 출력(버퍼를 비우는 역할)|
+|void|close()|사용한 시스템 자원을 반납하고 출력 스트림을 닫음(OutputStream을 더 이상 사용하지 않을 경우에 호출)|
+
+## write(int b) 메소드
+
+- 매개 변수로 주어진 int 값에서 끝에 있는 1 byte만 출력 스트림으로 보낸다.
+(바이트도 인수 값으로 받을 수 있음)
+매개 변수가 int 타입이라서 4 byte 전부를 출력 스트림에 보내는 것으로 오해할 수 있으니 주의해야 한다.
+
+-                                                           사용법                      
 
 
+``` Java
+OutputStream os = new FileOutputStream("C:/output.txt");
+byte [] data = "Programmer Study Blog".getBytes();
+for(int i = 0; i < data.length; i++){
+  os.write(data[i]); // 철자를 하나씩 보냄
+}
+```
+## write(byte[] b) 메소드
+- 매개값으로 주어진 바이트 배열의 모든 바이트를 출력 스트림으로 보낸다.
 
+-                                                           사용법                      
+```Java
+OutputStream os = new FileOutputStream("C:/output.txt");
+byte [] data = "Programmer Study Blog".getBytes();
+os.write(data); // 모두 한번에 보냄
+```
+-                                                           사용법    
 
+```Java
+## write(byte[] b, int off, int len) 메소드
+b[off]부터 len 개의 바이트를 출력 스트림으로 보낸다.
 
+OutputStream os = new FileOutputStream("C:/output.txt");
+byte [] data = "Programmer Study Blog".getBytes();
+os.write(data, 2, 5); // "ogram"만 보냄
+```
 
-
-
-
-
-
-
-
+## flush() 메소드
+- 버퍼에 남은 데이터를 모두 출력시키고 버퍼를 비우는 역할을 한다.
+예전 C(C++)에서 버퍼가 잘 안 비워져서 마지막에 flush() 함수를 자주 명시해준 기억이 나는데, 자바 역시 마지막에 혹시 남아 있을 수도 있는 데이터를 비워주기 위해 이 flush() 메소드를 사용하면 된다.
