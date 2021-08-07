@@ -33,7 +33,7 @@
 
 - [파이썬의 예외처리](https://github.com/JangHyoGwang/TIL/blob/main/%ED%8C%8C%EC%9D%B4%EC%8D%AC%EC%9D%98%20%EC%98%88%EC%99%B8%EC%B2%98%EB%A6%AC.ipynb)  
 
-## Algorithm 기초
+### Algorithm 기초
 
 - [파이썬의 자료구조](https://github.com/JangHyoGwang/TIL/blob/main/Python/%ED%8C%8C%EC%9D%B4%EC%8D%AC%EC%9D%98%20%EC%9E%90%EB%A3%8C%EA%B5%AC%EC%A1%B0.ipynb)   
 - 
