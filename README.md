@@ -36,5 +36,5 @@
 ### Algorithm 기초
 
 - [파이썬의 자료구조](https://github.com/JangHyoGwang/TIL/blob/main/Python/%ED%8C%8C%EC%9D%B4%EC%8D%AC%EC%9D%98%20%EC%9E%90%EB%A3%8C%EA%B5%AC%EC%A1%B0.ipynb)   
-- [동적 계획법]()
+- [동적 계획법](https://colab.research.google.com/drive/1bkdRY8ifp3O5LOKLzJadzOKrG_fh8VoR)
 
