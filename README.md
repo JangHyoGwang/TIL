@@ -11,7 +11,7 @@
 
 # Language
 
-### Java
+## Java
  - [문제풀이](https://github.com/JangHyoGwang/TIL/blob/main/Java/%EB%AC%B8%EC%A0%9C%ED%92%80%EC%9D%B4.md)
  - [Class](https://github.com/JangHyoGwang/TIL/blob/main/Java/Class.md)
  
@@ -20,8 +20,10 @@
  - [Day_02](https://github.com/JangHyoGwang/TIL/blob/main/Java/Day_02.md)   
       
 
-### Python
+## Python
 - [문제 풀이](https://github.com/JangHyoGwang/TIL/blob/main/Python/%EB%AC%B8%EC%A0%9C%ED%92%80%EC%9D%B4.md)
+
+### Python 기초
  
 - [파이썬 인터프리터의 이해](https://github.com/JangHyoGwang/TIL/blob/main/Python/%ED%8C%8C%EC%9D%B4%EC%8D%AC%20%EC%9D%B8%ED%84%B0%ED%94%84%EB%A6%AC%ED%84%B0.ipynb)   
 
@@ -29,7 +31,10 @@
 
 - [파이썬의 클래스](https://github.com/JangHyoGwang/TIL/blob/main/%ED%8C%8C%EC%9D%B4%EC%8D%AC%EC%9D%98%20%ED%81%B4%EB%9E%98%EC%8A%A4.ipynb)   
 
-- [파이썬의 예외처리](https://github.com/JangHyoGwang/TIL/blob/main/%ED%8C%8C%EC%9D%B4%EC%8D%AC%EC%9D%98%20%EC%98%88%EC%99%B8%EC%B2%98%EB%A6%AC.ipynb)   
+- [파이썬의 예외처리](https://github.com/JangHyoGwang/TIL/blob/main/%ED%8C%8C%EC%9D%B4%EC%8D%AC%EC%9D%98%20%EC%98%88%EC%99%B8%EC%B2%98%EB%A6%AC.ipynb)  
+
+## Algorithm 기초
 
 - [파이썬의 자료구조](https://github.com/JangHyoGwang/TIL/blob/main/Python/%ED%8C%8C%EC%9D%B4%EC%8D%AC%EC%9D%98%20%EC%9E%90%EB%A3%8C%EA%B5%AC%EC%A1%B0.ipynb)   
+- 
 
