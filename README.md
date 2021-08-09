@@ -13,4 +13,4 @@
 
 #### - [Java](https://github.com/JangHyoGwang/TIL/blob/main/Java/Java.md)
     
-#### - [Python](https://github.com/JangHyoGwang/TIL/new/main/Python)
+#### - [Python](https://github.com/JangHyoGwang/TIL/blob/main/Python/Python.md)
