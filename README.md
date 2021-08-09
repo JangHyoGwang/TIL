@@ -12,7 +12,11 @@
 # Language
 
 ## Java
+
  - [문제풀이](https://github.com/JangHyoGwang/TIL/blob/main/Java/%EB%AC%B8%EC%A0%9C%ED%92%80%EC%9D%B4.md)
+
+## Java 기초
+
  - [Class](https://github.com/JangHyoGwang/TIL/blob/main/Java/Class.md)
  
  - [Day_01](https://github.com/JangHyoGwang/TIL/blob/main/Java/Day_01.md)   
@@ -21,6 +25,7 @@
       
 
 ## Python
+
 - [문제 풀이](https://github.com/JangHyoGwang/TIL/blob/main/Python/%EB%AC%B8%EC%A0%9C%ED%92%80%EC%9D%B4.md)
 
 ### Python 기초
@@ -36,5 +41,6 @@
 ### Algorithm 기초
 
 - [파이썬의 자료구조](https://github.com/JangHyoGwang/TIL/blob/main/Python/%ED%8C%8C%EC%9D%B4%EC%8D%AC%EC%9D%98%20%EC%9E%90%EB%A3%8C%EA%B5%AC%EC%A1%B0.ipynb)   
+
 - [동적 계획법](https://github.com/JangHyoGwang/TIL/blob/main/Python/%EB%8F%99%EC%A0%81%EA%B3%84%ED%9A%8D%EB%B2%95%20(1).ipynb)
 
