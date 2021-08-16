@@ -14,6 +14,6 @@
 
 ### Algorithm 기초
 
-- [파이썬의 자료구조](https://github.com/JangHyoGwang/TIL/blob/main/Python/%ED%8C%8C%EC%9D%B4%EC%8D%AC%EC%9D%98%20%EC%9E%90%EB%A3%8C%EA%B5%AC%EC%A1%B0.ipynb)   
+- [파이썬의 자료구조와 알고리즘](https://github.com/JangHyoGwang/TIL/blob/main/Python/%EC%9E%90%EB%A3%8C%EA%B5%AC%EC%A1%B0%EC%99%80%20%EC%95%8C%EA%B3%A0%EB%A6%AC%EC%A6%98.md)   
 
 - [동적 계획법](https://github.com/JangHyoGwang/TIL/blob/main/Python/%EB%8F%99%EC%A0%81%EA%B3%84%ED%9A%8D%EB%B2%95%20(1).ipynb)
