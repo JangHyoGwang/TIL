@@ -8,7 +8,7 @@
 
 - [제어문과 함수](https://github.com/JangHyoGwang/TIL/blob/main/%EC%A0%9C%EC%96%B4%EB%AC%B8%EA%B3%BC%20%ED%95%A8%EC%88%98.ipynb)    
 
-- [파이썬의 클래스](https://github.com/JangHyoGwang/TIL/blob/main/%ED%8C%8C%EC%9D%B4%EC%8D%AC%EC%9D%98%20%ED%81%B4%EB%9E%98%EC%8A%A4.ipynb)   
+- [파이썬의 클래스](https://github.com/JangHyoGwang/TIL/blob/main/Python/%ED%8C%8C%EC%9D%B4%EC%8D%AC%EC%9D%98%20%ED%81%B4%EB%9E%98%EC%8A%A4.ipynb)   
 
 - [파이썬의 예외처리](https://github.com/JangHyoGwang/TIL/blob/main/%ED%8C%8C%EC%9D%B4%EC%8D%AC%EC%9D%98%20%EC%98%88%EC%99%B8%EC%B2%98%EB%A6%AC.ipynb)  
 
