@@ -14,16 +14,3 @@
 #### - [Java](https://github.com/JangHyoGwang/TIL/blob/main/Java/Java.md)
     
 #### - [Python](https://github.com/JangHyoGwang/TIL/blob/main/Python/Python.md)
-
-``` Python
-t = int(input())
-
-
-for i in range(t):
-    h, w, n = map(int, input().split())
-    cnt = [[0] * h] * w
-
-    for j in (cnt):
-        for index in range(1, len(j) + 1):
-            if 
-```
