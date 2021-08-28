@@ -14,26 +14,3 @@
 #### - [Java](https://github.com/JangHyoGwang/TIL/blob/main/Java/Java.md)
     
 #### - [Python](https://github.com/JangHyoGwang/TIL/blob/main/Python/Python.md)
-
-``` Python
-h, m, s = map(int, input().split())
-oven = int(input())
-
-h += oven // 3600
-m += (oven % 3600) // 60
-s += ((oven % 3600) % 60) 
-
-if s >= 60:
-  m += 1
-  s -= 60
-
-if m >= 60:
-  h += 1
-  m -= 60
-
-if h >= 24:
-  h -= 24
-
-print('%d %d %d' % (h,m,s))
-
-```
