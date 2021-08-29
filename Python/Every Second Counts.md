@@ -7,13 +7,13 @@
     - It’s important, therefore, to be able to determine the exact amount of elapsed time between the moment a client enters a cab until the moment they leave. 
     - Trying to write a program to do this has driven Meredith crazy (pun intended) so she’s come to you for some help.
 
-## 입력
+## input
 - Input consists of two lines: the first contains the start time and the second contains the end time for a single taxi ride. 
   - Each time is of the form hh : mm : ss, giving the hour, minute and seconds. 
     - Meredith uses a 24 hour clock, with 0 : 0 : 0 representing 12 midnight and 23 : 59 : 59 representing one second before midnight. 
     - Note that the end time may have a value less than the start time value if the ride spans midnight (see the last sample test case for an example of this).
 
-## 풀이
+## output
 
 - 삽질한 코드
   - 택시를 타고나서 자정을 넘어가는 케이스(3번 케이스)때문에 너무 어렵게 생각한 나머지
