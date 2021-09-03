@@ -14,3 +14,14 @@
 #### - [Java](https://github.com/JangHyoGwang/TIL/blob/main/Java/Java.md)
     
 #### - [Python](https://github.com/JangHyoGwang/TIL/blob/main/Python/Python.md)
+
+n = int(input())
+a = (2*n)-1
+
+for i in range(a, -1, -1):
+  if i % 2 == 1:
+    print(' ' * int((a-i) // 2) + '*' * i + ' ' * int((a-i) // 2))
+
+for i in range(2, a+1):
+  if i % 2 == 1:
+    print(' ' * int((a-i) // 2) + '*' * i + ' ' * int((a-i) // 2))
