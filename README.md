@@ -14,3 +14,33 @@
 #### - [Java](https://github.com/JangHyoGwang/TIL/blob/main/Java/Java.md)
     
 #### - [Python](https://github.com/JangHyoGwang/TIL/blob/main/Python/Python.md)
+
+``` 
+import itertools
+
+n = int(input())
+card = []
+for i in range(n):
+  a = list(map(int, input().split()))
+  card.append(a)
+
+tmp = []
+for i in range(len(card)):
+    ans = itertools.combinations(card[i], 3) # 카드 3장을 뽑을 경우의 수 저장
+    ans = list(ans)
+    tmp.append([])
+    for j in range(len(ans)):
+      if sum(ans[j]) < 10:
+        tmp[i].append(((j) , sum(ans[j])))
+      else:
+        tmp[i].append(((j) , (sum(ans[j]) % 10))) # 카드 3장의 합의 1의 자리 숫자를 저장
+
+# tmp.sort(key = lambda x : x[1], reverse = True)
+
+for k in range(len(tmp)):
+  print(tmp[k])
+```   
+      
+
+
+
