@@ -23,6 +23,7 @@ for i in range(n):
   a = list(map(int, input().split()))
   card.append(a)
 
+```
 tmp = []
 for i in range(len(card)):
     ans = itertools.combinations(card[i], 3) # 카드 3장을 뽑을 경우의 수 저장
@@ -35,3 +36,4 @@ for i in range(len(card)):
 
 for k in range(len(tmp)):
   print(max(tmp[k][1])) # 일의 자리 숫자 중 가장 큰 숫자가 나오는지 확인
+```
