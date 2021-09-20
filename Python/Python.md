@@ -28,3 +28,4 @@
 - [BFS](https://github.com/JangHyoGwang/TIL/blob/main/Python/BFS.md)
 - [DFS](https://github.com/JangHyoGwang/TIL/blob/main/Python/DFS.md)
 - [백 트래킹](https://github.com/JangHyoGwang/TIL/blob/main/Python/%E1%84%87%E1%85%A2%E1%86%A8%20%E1%84%90%E1%85%B3%E1%84%85%E1%85%A2%E1%84%8F%E1%85%B5%E1%86%BC.md)
+- [이진 탐색](https://github.com/JangHyoGwang/TIL/blob/main/Python/%E1%84%8B%E1%85%B5%E1%84%8C%E1%85%B5%E1%86%AB%20%E1%84%90%E1%85%A1%E1%86%B7%E1%84%89%E1%85%A2%E1%86%A8.md)
