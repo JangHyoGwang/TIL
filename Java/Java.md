@@ -11,9 +11,9 @@
 
 ### Java 자료구조
 
- - [배열](https://github.com/JangHyoGwang/TIL/blob/main/Java/%E1%84%87%E1%85%A2%E1%84%8B%E1%85%A7%E1%86%AF.md)
- - [큐](https://github.com/JangHyoGwang/TIL/blob/main/Java/%E1%84%8F%E1%85%B2.md)
- - [스택](https://github.com/JangHyoGwang/TIL/blob/main/Java/%E1%84%89%E1%85%B3%E1%84%90%E1%85%A2%E1%86%A8.md)
+ - [배열](https://github.com/JangHyoGwang/TIL/blob/main/Java/%EC%9E%90%EB%A3%8C%EA%B5%AC%EC%A1%B0/%E1%84%87%E1%85%A2%E1%84%8B%E1%85%A7%E1%86%AF.md)
+ - [큐](https://github.com/JangHyoGwang/TIL/blob/main/Java/%EC%9E%90%EB%A3%8C%EA%B5%AC%EC%A1%B0/%E1%84%8F%E1%85%B2.md)
+ - [스택](https://github.com/JangHyoGwang/TIL/blob/main/Java/%EC%9E%90%EB%A3%8C%EA%B5%AC%EC%A1%B0/%E1%84%89%E1%85%B3%E1%84%90%E1%85%A2%E1%86%A8.md)
 
 ### Java 알고리즘
 
