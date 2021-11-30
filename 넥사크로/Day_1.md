@@ -26,4 +26,6 @@
 - 웹이 등장하면서 자바가 웹을 통해 엄청난 성공을 거두며 주류 언어로 자리 잡음
 - 현재 국내에서는 정부 및 기업의 시스템 프로젝트가 대부분이다.
 
+## - [변수와 자료형](https://github.com/JangHyoGwang/TIL/blob/main/%EB%84%A5%EC%82%AC%ED%81%AC%EB%A1%9C/01.%20JAVA_%EB%B3%80%EC%88%98%EC%99%80%20%EC%9E%90%EB%A3%8C%ED%98%95.pdf)
+
 
