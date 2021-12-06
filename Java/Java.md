@@ -1,6 +1,6 @@
 # Java
 
-- [문제풀이](https://github.com/JangHyoGwang/TIL/blob/main/Java/%EB%AC%B8%EC%A0%9C%ED%92%80%EC%9D%B4.md)
+- [문제풀이](https://github.com/JangHyoGwang/TIL/blob/main/Java/%EA%B8%B0%EC%B4%88/%EB%AC%B8%EC%A0%9C%ED%92%80%EC%9D%B4.md)
 
 ### Java 기초
 
