@@ -1,0 +1,59 @@
+    <!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <title>Insert title here</title>
+</head>
+
+<body>
+
+
+    <h1> 배열 실습 문제 3</h1>
+    <br><br>
+   문제5. 다음 보기의 그림을 클릭하면 그림이 사라지고 그림을 모두 클릭하면 클릭한 순서대로 그림이 나올수 있도록 만들어라.<br>
+    (힌트 : 태그 자체를 가져올때에는 outerHTML을 사용하면 됨)<br>
+
+    <fieldset>
+        <style>
+            .divss {
+                float: left;
+            
+            }
+        </style>
+        <legend>보기</legend>
+        <div id="div5">
+            <div style="border:1px solid black; height:100px; width:100px; background-color:red;" class="divss" onclick="clickDiv('red')" id="red";></div>
+            <div style="border:1px solid black; height:100px; width:100px; background-color:blue;" class="divss" onclick="clickDiv('blue')" id="blue";></div>
+            <div style="border:1px solid black; height:100px; width:100px; background-color:green;" class="divss" onclick="clickDiv('green')" id="green";></div>
+            <div style="border:1px solid black; height:100px; width:100px; background-color:pink;" class="divss" onclick="clickDiv('pink')" id="pink";></div>
+            <div style="border:1px solid black; height:100px; width:100px; background-color:yellow;" class="divss" onclick="clickDiv('yellow')" id="yellow";></div>
+        </div>
+
+    </fieldset><br>
+    <script>
+        var index = 0;
+        var clickArr = [];
+        var str = "";
+        function clickDiv(color) {
+            var selected = document.getElementById(color);
+            // clickArr.push(selected);
+            clickArr[index] = selected; // clickArr 배열의 인덱스에 가지고온 컬러태그를 저장.
+            selected.style.display = "none";
+            index++; // 컬러 태그를 채우고 인덱스 +1 증가.
+            if(index == 5) { // 5번 다 클릭해서 색깔들을 다 채웠다면
+                for(var i = 0; i < index; i++) {
+                    clickArr[i].style.display = "block"; 
+                    str += clickArr[i].outerHTML; // 참조값이 아닌 컬러 태그 누적.
+                }
+                document.querySelector("#div5").innerHTML = str;
+                // 반복하기 위해서 값 초기화.
+                index = 0; 
+                str = "";
+            }
+        }
+    </script>
+
+</body>
+
+</html>
