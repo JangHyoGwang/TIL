@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>네비게이션3</title>
+    <style>
+
+        #div-navi {
+            width: 1200px;
+            height: 50px;
+        }
+
+        .navi {
+            margin: 0;
+            padding: 0;
+        }
+
+        .navi li {
+            list-style-type: none;
+            width: 120px;
+            height: 50px;
+            float: left;
+            background: #600;
+            text-align: center;
+            font-family: "바탕체";
+            position: relative;
+        }
+
+        .navi li a {
+            /* padding: 5px 10px; */
+            display: block;
+            text-decoration: none;
+            line-height: 50px;
+            color: #FFF;
+            box-shadow: 1px 1px 1px #ccc;
+        }
+
+        .navi>li>a:hover { /* 네비게이션에 마우스 올리면 주황색으로 변경 */
+            color: rgb(247, 73, 4);
+        }
+
+        .navi>li>ul {
+            padding: 0;
+            opacity: 0;
+            width: 240px;
+            position: absolute;
+        }
+
+        .navi li ul li {
+            width: 100%;
+        }
+
+        .navi li ul li a:hover {
+            background: #900;
+            column-rule-color: #F90;
+        }
+
+        .navi li ul li  a {
+            padding: 0px 0px 0px 10px;
+            /* width: 100%; */
+            display: block;
+            color: #900;
+            background: #D8AFAF;
+            text-align: left;
+            font-weight: bold;
+        }
+
+        #subM:hover ul {
+            opacity: 1;
+            transition-duration: 3s;
+        }
+
+        #subM>ul:hover {
+            opacity: 0;
+        }
+
+    </style>
+</head>
+<body>
+    <h1>&nbsp;&nbsp;&nbsp;서브 메뉴가 펼쳐지는 네비게이션 만들기</h1>
+    <hr>
+    <div id="div-navi">
+        <ul class="navi">
+            <li><a href="#">Home</a></li>
+            <li id="subM"><a href="#">웹개발</a>
+                <ul>
+                    <li><a href="#">웹디자인</a></li>
+                    <li><a href="#">HTML5 + CSS3</a></li>
+                    <li><a href="#">JQuery</a></li>
+                    <li><a href="#">웹 + 모바일</a></li>
+                </ul>
+            </li>
+            <li><a href="#">게시판</a></li>
+            <li><a href="#">프로필</a></li>
+        </ul>
+    </div>
+</body>
+</html>

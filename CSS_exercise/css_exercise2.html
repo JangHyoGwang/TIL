@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>네비게이션1</title>
+    <style>
+        .navi li {
+            list-style-type: none; /* 동그라미 없애기*/
+            width: 100px;
+            height: 50px;
+            float: left; /* 인라인 속성 */
+            text-align: center;
+            background: linear-gradient(to bottom, #c9c9c9, #848484);
+            border: 1px solid black;
+        }
+
+        .navi li a { /* 박스 안 글자 적용 */
+            display: block;
+            text-decoration: none; /* 밑줄 없애기 */
+            line-height: 50px; /* 탑에서 조금 간격 주기, 자간 간격 */
+            color: #232323;
+            
+        }
+        li a:hover {
+            color: #FFFFFF;
+            background-color: #333333;
+        }
+
+        .navi li:first-child { /* 첫번째 li 깎기 */
+            border-top-left-radius: 10px;
+            border-bottom-left-radius: 10px;
+        }
+            .navi li:first-child a { /* 첫번째 li 깎기 */
+                border-top-left-radius: 10px;
+                border-bottom-left-radius: 10px;
+            }
+
+        .navi li:last-child { /* 마지막 li 깎기 */
+            border-top-right-radius: 10px;
+            border-bottom-right-radius: 10px;
+        }
+            .navi li:last-child a { /* 마지막 li 깎기 */
+                border-top-right-radius: 10px;
+                border-bottom-right-radius: 10px;
+            }
+
+
+    </style>
+</head>
+<body>
+    <h1>그라데이션을 이용한 메뉴</h1>
+    <hr>
+    <div>
+        <ul class="navi">
+            <li><a href="#">Home</a></li>
+            <li><a href="#">HTML5</a></li>
+            <li><a href="#">CSS3</a></li>
+            <li><a href="#">jQuery</a></li>
+            <li><a href="#">Javascript</a></li>
+            <li><a href="#">Profile</a></li>
+        </ul>
+    </div>
+</body>
+</html>
