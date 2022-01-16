@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>jQuery 이벤트</title>
+    <script src="../jQuery/js/jquery-3.6.0.min.js"></script>
+    <style>
+        #div1 {
+            border: 3px solid black;
+            height: 100px;
+            width: 100px;
+        }
+    </style>
+</head>
+
+<body>
+    <script>
+        $(document).ready(function () {
+            // on -> addEventListener
+            $("#div-hover").on("mouseover", function () {
+                // $("#div-hover").css("background", "red");
+                // this -> 이벤트가 발생한 태그를 알려줌
+                $(this).css("background", "red");
+            });
+
+            $("#click").on("click", function () {
+                $(this).css("color", "gold");
+            });
+            $("#dblclick").on("dblclick", function () {
+                $(this).css("color", "brown");
+            });
+            $("#div-updown").on("mousedown", function () {
+                $(this).css("background", "red");
+            });
+            $("#div-updown").on("mouseup", function () {
+                $(this).css("background", "blue");
+            });
+            $("textarea").on("keyup", function () {
+                // alert("test");
+                // console.log($("#noti").html());
+                var textLegnth = $(this).val().length;
+                $("#noti").html("작성가능한 글자수 : " + (150 - textLegnth));
+            });
+            $("#userId").on("focus", function () {
+                $(this).css("background", "red");
+            })
+            $("#userId").on("blur", function () { // 인풋창에서 마우스 때면 색상 원상태로
+                $(this).css("background", "white");
+            });
+            $("#my-form").on("submit", function () {
+                var userId = $("#userId").val();
+                if (userId != "") { // 입력안하고 제출 누르면 제출 안됨
+                    return true;
+                } else {
+                    return false;
+                }
+            });
+
+            $("#allCheck").on("change", function () {
+                var checkTags = $("#check-item").children(); // div 아래에 있는 자손들 모두 선택함.
+                if ($(this).is(":checked")) { // 체크가 된 변화만 찾겠다.
+                    // checkTags.attr("checked", "checked");
+                    checkTags.prop("checked", true);
+                } else {
+                    // checkTags.removeAttr("checked");
+                    checkTags.prop("checked", false);
+                }
+            });
+            $("#select-tag").on("change", function () {
+                console.log($("option").filter(":selected").text());
+            });
+            // 값 가져오는 메소드 
+            /*
+                1. text() - 태그 미적용
+                2. html() - 태그 적용
+                3. val() - input태그 값 가져오기 
+            */
+
+            $("#btn1").on("click", function() {
+                var value = $(this).next().text();
+                $(this).next().text(parseInt(value)+1);
+            });
+
+            $("#btn2").on("click", function() {
+                var value = $(this).next().text();
+                $(this).next().text(parseInt(value)+1);
+            });
+
+            $("#btn3").on("click", function() {
+                var value = $(this).next().text();
+                $(this).next().text(parseInt(value)+1);
+            });
+
+            $("#lastBtn").on("click", function() {
+                $("#btn1").trigger("click"); // 이벤트 강제 발생 메소드
+                $("#btn2").trigger("click");
+                $("#btn3").trigger("click");
+            });
+            // 이벤트 연결 
+            $("#btn-2").on("click", function() {
+                $("#btn-1").text("Click");
+                $("#btn-1").on("click", function() {
+                    $("#h1").append("oh!!!!!");
+                });
+            });
+
+            $("#btn-3").on("click", function() {
+                $("#btn-1").text("nothing..");
+                $("#btn-1").off("click"); // 걸어줬던 click을 끄겠다.
+            });
+
+            // 이벤트 버블링
+            $("#h1-click").on("click", function() {
+                alert("h1 클릭");
+            });
+
+            $("#span-click").on("click", function(e) {
+                alert("span 클릭");
+                e.stopPropagation(); // 이벤트 전달을 막는 메소드 
+            });
+
+            $("a").on("click",function(event) {
+                alert("클릭이벤트!!");
+                event.preventDefault(); // 기본 이벤트를 막는 메소드
+            });
+
+        });
+        $(document).on("mousemove", function (event) {
+            // console.log(event);
+            $("#span1").html("<br>" + event.pageX + ", " + event.pageY);
+        });
+    </script>
+    <h1>이벤트</h1>
+    <p>
+        사용자가 마우스를 클릭하거나 마우스를 움직여 특정화면 위로 가져가거나 키보드를 누르는 행위를 이벤트라고 부름
+        <br>jQuery에서는 event객체를 통해서 이벤트를 제어함.
+    </p>
+    <h3>마우스오버 이벤트</h3>
+    <div id="div-hover" style="border:3px solid black;width:100px;height:100px"></div>
+    <h3>클릭 / 더블클릭 이벤트</h3>
+    <p id="click">click</p>
+    <p id="dblclick">double click</p>
+    <p></p>
+    <h3>마우스업/다운 이벤트</h3>
+    <div id="div-updown" style="border:3px solid black;width:100px;height:100px"></div>
+    <h3>마우스이동 이벤트</h3>
+    <h1>
+        Mouse is a coordinate :
+        <span id="span1"></span>
+    </h1>
+    <h3>키업/키프레스/키다운 이벤트</h3>
+    <div>
+        <p>글 작성</p>
+        <h1 id="noti">작성가능한 글자수 : 150</h1>
+        <textarea name="" id="" cols="60" rows="5"></textarea>
+    </div>
+    <h1>입력 양식(form) 이벤트</h1>
+    <h3>submit / focus / blur</h3>
+    <form id="my-form" action="result.html">
+        ID : <input type="text" name="userId" id="userId">
+        PW : <input type="password" name="userPw" id="userPw">
+        <input type="submit" value="제출">
+        <input type="reset" value="취소">
+    </form>
+    <h3>change</h3>
+    <p>
+        input태그의 type속성이 checkbox, radio인 input태그와 select태그의 상태 변경을 감지하는 이벤트
+    </p>
+    전체 : <input type="checkbox" name="allCheck" id="allCheck"> <br>
+    <div id="check-item">
+        <input type="checkbox" name="" id=""> A
+        <input type="checkbox" name="" id=""> B
+        <input type="checkbox" name="" id=""> C
+    </div>
+    남자 : <input type="radio" name="" id=""> <br>
+    <select name="" id="select-tag">
+        <option value="">1</option>
+        <option value="">2</option>
+        <option value="">3</option>
+    </select>
+    <h1>이벤트2</h1>
+    <p>
+        사용자가 마우스를 클릭하거나 마우스를 움직여 특정화면 위로 가져가거나 키보드를 누르는 행위를 이벤트라고 부름
+        <br>jQuery에서는 event객체를 통해서 이벤트를 제어함.
+    </p>
+    <h3>이벤트 강제 발생(trigger)</h3>
+    <button id="btn1">레벨업</button>
+    기사 : <span>0</span> Level <br>
+    <button id="btn2">레벨업</button>
+    궁수 : <span>0</span> Level <br>
+    <button id="btn3">레벨업</button>
+    마법사 : <span>0</span> Level <br>
+    <button id="lastBtn">All</button><br>
+
+    <h3>이벤트 연결</h3>
+    <p>
+        on() 메소드 : 이벤트 연결
+        <br>
+        off() 메소드 : on()으로 연결된 이벤트 제거
+    </p>
+    <button id="btn-1">nothing..</button>
+    <button id="btn-2">click add</button>
+    <button id="btn-3">click remove</button>
+    <h1 id="h1"></h1>
+
+    <div id="div1">
+
+    </div>
+    <button id="btnOnOff">off</button>
+    <h3>이벤트 버블링 막기 및 기본 이벤트 제거</h3>
+    <p>
+        stopPropagation() : 이벤트 전달 제거 <br>
+        preventDefault() : 기본 이벤트 제거
+    </p>
+    <h1 id="h1-click">
+        <span id="span-click">click</span>
+    </h1>
+    <h1>
+        <a href="http://www.iei.or.kr">kh정보교육원</a>
+</body>
+
+</html>
