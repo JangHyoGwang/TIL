@@ -1,0 +1,299 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>선택자 part2</title>
+    <style>
+        #p-tag1 {
+            color: red;
+        }
+        /* 기본 속성 선택자 */
+        input[name=user-id] {
+            background-color: chocolate;
+        }
+
+        p[name=pn-tag1] {
+            color: gold;
+        }
+
+        h4[name=h4-tag] {
+            background-color: darkgreen;
+        }
+        /* 문자열 속성 선택자 */
+        p[name~=Test] {
+            /* 띄어쓰기로 구분되어 있는 값 중 특정값을 포함하는 태그 선택 */
+            background-color: darkkhaki;
+        }
+        p[class|=class] {
+            /* 속성값으로 시작하고 '-'를 포함하는 태그 선택 */
+            color: red;
+        }
+        /* p[class=class-c2] {
+            color: violet;
+        } */
+        #i1 {
+            color: blue;
+        }
+        p[id^=i] {
+            /* 속성값이 특정값으로 시작되는 태그 선택 */
+            color : blue;
+        }
+        p[class$=c1] {
+            /* 속성값이 특정값으로 끝나는 태그 선택 */
+            background-color: darkorange;
+        }
+        p[class*=c2] {
+            /* 속성값이 포함된 태그 선택 */
+            color: magenta;
+        }
+        /* 자손선택자 */
+        /* div>h1 {
+            background-color: maroon;
+        } */
+        /* div>ul>li {
+            background-color: mediumaquamarine;
+        } */
+        /* 후손선택자 */
+        /* div li {
+            background-color: mediumvioletred;
+        } */
+        #div-test>h4 {
+            background-color: olive;
+        }
+        #div-test li {
+            color: red;
+        }
+        /* 우선 순위가 밀리자만 가장 편한 방법 */
+        #ul-test li {
+            background-color: rosybrown;
+        }
+        #div-test>ul>li {
+            background-color: seagreen;
+        }
+        /* 동위선택자 */
+        h5~p {
+            /* h5 미포함 바로 뒤 여러개 */
+            background-color: slateblue;
+        }
+        h5+p { 
+            /* h5 미포함 바로 뒤 1개 */
+            background-color: springgreen;
+        }
+        /* 일반 구조 선택자(구조 의사 클래스) */
+        /* 
+            1. :first-child
+            2. :last-child
+            3. :nth-child(2n)
+            4. :nth-last-child(수열) 
+        */
+        #div-test1>p:first-child {
+            color: lightgreen;
+        }
+        #div-test1>p:last-child {
+            color: dimgray;
+        }
+        #div-test1>p:nth-child(2n) {
+            color: gold;
+        }
+        #div-test3>p:nth-child(2n+1) {
+            background-color: gold;
+        }
+        /* 형태 구조 선택자 */
+        /* 
+            1. :first-of-type
+            2. :last-of-type
+            3. :nth-of-type(2n)
+            4. :nth-last-of-type(2n) 
+        */
+        #div-test4>p:nth-of-type(2) {
+            color: red;
+        }
+        /* 
+        반응 선택자
+        1. :active, 사용자가 클릭한 태그 선택
+        2. :hover, 사용자의 마우스가 올라가 있는 태그 선택
+
+        상태 선택자
+        1. :checked, 체크 상태의 input태그를 선택
+        2  :focus, 초점이 맞춰진 input태그를 선택
+
+        속성 선택자 (select option 태그)
+        1. option:enabled,
+        2. option:disabled,
+
+        링크 선택자 (a 태그)
+        1. :link, 방문 전
+        2. :visited, 방문 후
+
+        부정 선택자 
+        */
+        #div-test4>p:nth-of-type(2n):active {
+            background-color: greenyellow;
+        }
+        #div-test4>h4:nth-of-type(2n):hover {
+            background-color: indianred;
+        }
+        /* 상태 선택자 */
+        input[type=text]:focus {
+            background-color: deepskyblue;
+        }
+        input:checked {
+            width: 50px;
+            height : 50px;
+        }
+        /* 속성 선택자 */
+        option:enabled {
+            background-color: green;
+        }
+        option:disabled {
+            background-color: red;
+        }
+        /* 링크 선택자 */
+        :link {
+            color: green;
+        }
+        :visited {
+            color: red;
+        }
+        /* 부정 선택자 */
+        #div-test4>p:not(:nth-of-type(2n)) {
+            background-color: hotpink;
+        }
+    </style>
+</head>
+
+<body>
+    <!-- 기본속성 선택자 -->
+    <h1>기본 속성 선택자 / 문자열 속성 선택자</h1>
+    <input type="text" name="user-id" id="">
+    <input type="text" name="user-pw" id="">
+
+    <p name="pn-tag1" id="p-tag1">p에 있는 텍스트</p>
+    <p name="pn-tag2">p에 있는 텍스트2</p>
+    <h4 name="h4-tag">h4에 있는 텍스트</h4>
+
+    <p name="Test 1" id="i1" class="class-c1">Test1 글자입니다.</p>
+    <p name="Test 2" id="i2" class="c1">
+        Test2 글자입니다.</p>
+    <p name="Test 3" id="i3" class="c1">Test3 글자입니다.</p>
+    <p name="Test 4" id="i4" class="c2">Test4 글자입니다.</p>
+    <p name="Test 5" id="i5" class="c2">Test5 글자입니다.</p>
+    <p name="Test 6" id="i6" class="class-c2">Test6 글자입니다.</p>
+
+    <p name="Test 1" id="i1" class="p-class c1">Test1 글자입니다.</p>
+    <p name="Test 2" id="i2" class="class c1">
+        Test2 글자입니다.</p>
+    <p name="Test 3" id="i3" class="class c2">Test3 글자입니다.</p>
+    <p name="Test 4" id="id4" class="class c2">Test4 글자입니다.</p>
+    <p name="Test 5" id="id5" class="class c3">Test5 글자입니다.</p>
+    <p name="Test 6" id="id6" class="class-p c3">Test6 글자입니다.</p>
+
+    <h1>자손 / 후손 선택자</h1>
+    <div>
+        <h1>자손입니다.</h1>
+        <h2></h2>
+        <ul>
+            <li>후손1입니다.</li>
+            <li>후손2입니다.</li>
+        </ul>
+    </div>
+    <br><br><br><br><br><br><br><br>
+    <h3>
+        자손선택자를 이용하여 h4 배경색 바꾸기
+        <br>후손 선택자를 이용하여 li 글씨색 바꾸기
+        <br>자손 선택자를 이용하여 li 배경색 바꾸기
+    </h3>
+
+    <div id="div-test">
+        <h4>div의 자손1입니다.</h4>
+        <h4>div의 자손2입니다.</h4>
+        <ul id="ul-test">
+            <li>ul의 자손입니다. 동시에 div의 후손입니다.</li>
+            <li>ul의 자손입니다. 동시에 div의 후손입니다.</li>
+        </ul>
+    </div>
+    <br><br><br>
+    <h1>동위선택자</h1>
+    <div>
+        <h4>자손1</h4>
+        <h5>자손2</h5>
+        <p>자손3</p>
+        <p>자손4</p>
+        <p>자손5</p>
+    </div>
+
+    <h1>일반 구조 선택자</h1>
+    <div>
+        <div id="div-test1">
+            <p>테스트1-1 입니다.</p>
+            <p>테스트1-2 입니다.</p>
+            <p>테스트1-3 입니다.</p>
+            <p>테스트1-4 입니다.</p>
+            <p>테스트1-5 입니다.</p>
+        </div>
+        <div id="div-test2">
+            <p>테스트2-1 입니다.</p>
+            <p>테스트2-2 입니다.</p>
+            <p>테스트2-3 입니다.</p>
+        </div>
+    </div>
+
+    <div id="div-test3">
+        <p>테스트1 입니다.</p>
+        <p>테스트2 입니다.</p>
+        <p>테스트3 입니다.</p>
+        <p>테스트4 입니다.</p>
+        <p>테스트5 입니다.</p>
+        <p>테스트6 입니다.</p>
+    </div>
+    <br><br><br>
+    <h1>형태 구조 선택자</h1>
+    <div id="div-test4">
+        <p>테스트 1p입니다.</p>
+        <h4>테스트 h4의 1번째</h4>
+        <p>테스트 2p입니다.</p>
+        <h4>테스트 h4의 2번째</h4>
+        <p>테스트 3p입니다.</p>
+        <h4>테스트 h4의 3번째</h4>
+        <p>테스트 4p입니다.</p>
+        <h4>테스트 h4의 4번째</h4>
+    </div>
+    <h1>상태 선택자</h1>
+    <fieldset>
+        <legend>회원 정보 입력</legend>
+        이름 : <input type="text" name="" id=""><br>
+        나이 : <input type="text" name="" id=""><br>
+        성별 :
+        남자  <input type="radio" name="gender" id=""> 여자
+        <input type="radio" name="gender" id="">
+        <br><hr>
+        취미 : 
+        노래 : <input type="checkbox" name="" id="">
+        운동 : <input type="checkbox" name="" id="">
+        맛집탐방 <input type="checkbox" name="" id="">
+        기타 <input type="checkbox" name="" id="">
+    </fieldset>
+    <br><br><br>
+    <h1>속성 선택자</h1>
+    <fieldset>
+        <legend>회원가입(19세 미만 가입 불가)</legend>
+        ID : <input type="text" name="" id=""><br>
+        PW : <input type="password" name="" id=""><br>
+        이름 : <input type="text" name="" id=""><br>
+        나이 :
+        <select name="" id="">
+            <option value="" disabled>10대</option>
+            <option value="">20대</option>
+            <option value="">30대</option>
+            <option value="">40대</option>
+        </select>
+    </fieldset>
+    <h1>링크 선택자</h1>
+    <a href="http://www.yahoo.com" target="_blank">야후로 이동</a>
+    <br><br><br><br><br><br><br><br>
+</body>
+
+</html>
