@@ -1,0 +1,33 @@
+#header {
+    height: 150px;
+    background-color: lavender;
+}
+
+#contents {
+    height: 500px;
+}
+    #contents_layer1 {
+        width: 20%;
+        height: inherit;
+        background-color: darkgreen;
+        float: left;
+    }
+
+    #contents_layer2 {
+        width: 60%;
+        height: inherit;
+        background-color: rgb(161, 90, 4);
+        float: left;
+    }
+
+    #contents_layer3 {
+        width: 20%;
+        height: inherit;
+        background-color: dodgerblue;
+        float: left;
+    }
+
+#footer {
+    height: 100px;
+    background-color: lawngreen;
+}

@@ -1,0 +1,52 @@
+#header {
+    height: 150px;
+}
+    #header_layer1 {
+        width: 20%;
+        height: inherit;
+        background-color: crimson;
+        float: left;
+    }
+
+    #header_layer2 {
+        width: 70%;
+        height: inherit;
+        background-color: darkcyan;
+        float: left;
+    }
+
+    #header_layer3 {
+        width: 10;
+        height: inherit;
+        background-color: darkorange;
+        float: left;
+    }
+
+#contents {
+    height: 500px;
+}
+    #contents_layer1 {
+        width: 15%;
+        height: inherit;
+        background-color: mediumaquamarine;
+        float: left;
+    }
+
+    #contents_layer2 {
+        width: 70%;
+        height: inherit;
+        background-color: mediumslateblue;
+        float: left;
+    }
+
+    #contents_layer3 {
+        width: 15%;
+        height: inherit;
+        background-color: lightslategray;
+        float: left;
+    }
+
+#footer {
+    height: 100px;
+    background-color: rgb(161, 214, 15);
+}

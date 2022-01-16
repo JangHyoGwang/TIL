@@ -1,0 +1,179 @@
+img {
+    width: 100%;
+    height: 100%;
+}
+
+.main-img {
+    width :95%;
+    height: 90%;
+    margin-left: 10px;
+}
+
+.img-caption {
+    text-align: center;
+}
+
+#header {
+    height: 150px;
+    
+}
+    #logo {
+        height: 100%;
+        width: 17%;
+        float: left;
+    }
+
+    #title {
+        height: 100%;
+        width: 68%;
+        float: left;
+    }
+
+    #side {
+        height: 100%;
+        width: 15%;
+        float: left;
+    }
+#navi {
+    height: 50px;
+    background-color: lightcyan;
+}
+    #menu {
+        margin: 0;
+        padding: 0;
+        height: 100%;
+        overflow: hidden; 
+    }
+
+    #menu li {
+        width: 25%;
+        height: 100%;
+        text-align: center;
+        list-style-type: none;
+        line-height: 50px;
+        float: left;
+        background-color: rgb(100, 173, 21, 0.98);
+    }
+
+    a {
+        text-decoration: none;
+        font-weight: bolder;
+    }
+    li a:link {
+        color: white;
+        font-family: "굴림체";
+    }
+    li a:visited {
+        color: white;
+    }
+
+#contents {
+    height: 450px;
+
+}
+    #banner {
+        height: inherit;
+        width: 15%;
+        background-image: url(../img/left_img.jpg);
+        background-repeat: no-repeat;
+        background-size: cover;
+        float: left;
+    }
+
+    #main-contents {
+        height: inherit;
+        width: 67%;
+        float: left;
+    }
+        #img-top {
+            width: 100%;
+            height: 50%;
+        }
+            #top-left {
+                width: 50%;
+                height: 100%;
+                float: left;
+            }
+
+            #top-right {
+                width: 50%;
+                height: 100%;
+                float: left;
+            }
+        
+        #img-bottom {
+            width: 100%;
+            height: 50%;
+        }
+            #bottom-left {
+                width: 50%;
+                height: 100%;
+                float: left;
+            }
+
+            #bottom-right {
+                width: 50%;
+                height: 100%;
+                float: left;
+            }
+
+    #main-login {
+        height: inherit;
+        width: 18%;
+        float: left;
+    }
+        #aside-login {
+            width: 100%;
+            height: 18%;
+        }
+        
+            #login_header {
+                height: 50px;
+            }
+                #login_header_layer1 {
+                    height: inherit;
+                    width: 70%;
+                    float: left;
+                }
+                    #id_field {
+                        width: 100%;
+                        height: 50%;
+                    }
+            
+                    #pw_field {
+                        width: 100%;
+                        height: 50%;
+                        
+                    }
+                        input {
+                            width: 93%;
+                        }
+                    
+                #login_header_layer2 {
+                    height: inherit;
+                    width: 30%;
+                    float: left;
+                }
+                    #btn {
+                        width :90%;
+                        height: 90%;
+                        margin-top: 3px;
+                        margin-left: 5px;
+                    }
+                    
+            #login_footer {
+                height: 30px;
+                text-align: center;
+            }
+            
+        #aside-top {
+            height: 63%;
+        }
+        
+        #aside-bottom {
+            height: 19%;
+        }
+    #footer {
+        height: 80px;
+        width: 100%;
+    }
