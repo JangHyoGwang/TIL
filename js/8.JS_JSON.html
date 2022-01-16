@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JSON</title>
+    <style>
+        table {
+            text-align: center;
+            width: 650px;
+            border: 1px solid black;
+        }
+
+        th,
+        tr,
+        td {
+            border: 1px double black;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>JSON</h1>
+    <h3>JSON(Javscript Object Notation) : 자바스크립트 객체 표기법</h3>
+    <pre>
+    JSON을 사용하면 모든 데이터형을 서버와 주고 받을 수 있다.(사용목적)
+    <br> 숫자, 문자열, boolean, 배열, 객체, null
+    <br>
+    '{'으로 시작하여 '}'로 끝나며 그 속에 데이터를 표기하고 'key : value(값)' 쌍으로 구성된다.
+        {
+            "name" : "이순신",
+            "age" : 27,
+            "birth" : "1990-01-01",
+            "gender" : "남",
+            "marry" : true,
+            "address" : "서울특별시 중구 인사동",
+            "family" : {  
+                        "father" : "아버지",
+                        "mother" : "어머니",
+                        "brother" : "동생"
+                    }
+        }
+        <br>
+<table>
+    <tr>
+        <th>구분값</th>
+        <th>Javascript Object</th>
+        <th>Javascript Object Notation(JSON)</th>
+    </tr>
+    <tr>
+        <td>Boolean</td>
+        <td>var n = new Boolean(true);</td>
+        <td>var n = true;</td>
+    </tr>
+    <tr>
+        <td>Number</td>
+        <td>var n = new Number(3);</td>
+        <td>var n = 3;</td>
+    </tr>
+    <tr>
+        <td>String</td>
+        <td>var s = new String("hello");</td>
+        <td>var s = "hello";</td>
+    </tr>
+    <tr>
+        <td>Array</td>
+        <td>var arrs = new Array();</td>
+        <td>var arrs = [];</td>
+    </tr>
+    <tr>
+        <td>Object</td>
+        <td>var obj = new Object();</td>
+        <td>var obj = {};</td>
+    </tr>
+</table>
+</pre>
+    <h3>XML, CSV, JSON</h3>
+    <pre>
+&lt;notices&gt; <br>
+    &lt;notice id="1" title="All that json" /&gt; <br>
+    &lt;notice id="2" title="json class" /&gt; <br>
+    &lt;notice id="3" title="more about json" /&gt; <br>
+&lt;/notices&gt;
+    </pre>
+    <p>
+        1, All that json<br>
+        2, json class<br>
+        3, more about json<br>
+    </p>
+    <pre>
+<!-- json 객체 배열 -->
+[
+    { "id" : 1, "title" : "All that json" },
+    { "id" : 2, "title" : "json class" },
+    { "id" : 3, "title" : "more about json" },
+]
+    </pre>
+    <script>
+        var person = new Object();
+        person.name = "홍길동";
+        person.hobby = "독서";
+        person.dream = "개발자";
+
+        var human = {
+            "name" : "홍길동",
+            "hobby" : ["독서", "낚시", "넷플릭스"],
+            "dream" : "웹개발자",
+            "age" : 33
+        }
+
+        var object = {
+            "I love you" : "BTS",
+            "I hate you" : "Javascript"
+        }
+
+        var dog = {
+            "name" : "흰둥이",
+            "eat" : function() {}
+        }
+
+        var student = {
+            "sName" : "홍길동",
+            "sKor" : 33,
+            "sEng" : 44,
+            "sMath" : 55
+        }
+    </script>
+</body>
+
+</html>

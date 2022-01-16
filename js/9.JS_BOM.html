@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Browser Object Model(window 객체)</title>
+    <style>
+        .area {
+            background-color: goldenrod;
+            border: 1px solid black;
+            width: 300px;
+            height: 100px;
+            font-size: 30px;
+            color: red;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>Window 객체</h1>
+    <p>Window 객체는 자바스크립트의 최상위 객체이며, BOM과 DOM으로 나뉜다</p>
+    <h3>Window 객체</h3>
+    <p>브라우저 창에 대한 설정을 하는 객체</p>
+    <button id="btn-1">네이버</button>
+    <button id="btn-2">다음</button>
+    <h3>Window 객체의 timer 메소드</h3>
+
+    <button id="btn-3">setTimeout 실행확인</button>
+    <br><br>
+
+    <button id="btn-4">setInterval 실행확인</button>
+    <div id="area1" class="area"></div>
+    <br>
+    <button id="btn-5">clearInterval 실행확인</button>
+    <div id="area2" class="area"></div><br>
+
+    <button id="btn-confirm">confirm 확인</button>
+    <button id="btn-prompt">prompt확인</button>
+    <h3>screen 객체</h3>
+    <p>웹 브라우저 화면이 아닌 운영체제 화면의 속성을 가직 객체</p>
+    <button id="btn-6">실행확인</button>
+    <h3>navigator 객체</h3>
+    <p>웹페이지를 실행하고 있는 브라우저에 대한 정보를 가지고 있는 객체</p>
+    <button id="btn-7">실행확인</button>
+    <h3>location 객체</h3>
+    <p>브라우저 주소 표시줄과 관련된 객체</p>
+    <button id="btn-8">실행확인</button><br>
+
+    <!-- location은 location.href와 같은 역할을 함(페이지 이동시) -->
+    <button onclick="location.href='http://www.iei.or.kr'">iei로 이동!</button>
+    <button onclick="location=location">새로고침1</button>
+    <button onclick="location.reload()">새로고침2</button>
+    <!-- 뒤로가기 가능 -->
+    <button onclick="location.assign('http://www.google.com')">구글로 이동1</button>
+    <!-- 뒤로가기 불가능 -->
+    <button onclick="location.replace('http://www.google.com')">구글로 이동2</button>
+
+    <script>
+        var btn1 = document.getElementById("btn-1");
+        var btn2 = document.querySelector("#btn-2");
+        var btn3 = document.querySelector("#btn-3");
+        var btn4 = document.getElementById("btn-4");
+        btn1.addEventListener("click", function() { // 표준 이벤트 모델
+            // a 태그 없이 브라우저 창 열기
+            window.open("http://www.naver.com");
+        });
+        btn2.addEventListener("click", function() {
+            window.open("http://www.daum.net", "다음카카오", "width=300, height=400, menubar=no, toolbar=no");
+        });
+        btn3.onclick = function() { // 고전 이벤트 모델 
+            var myWindow = window.open(); // 객체로 지정하게 되면 이후에 행동들을 지정할 수 있게 된다.
+            myWindow.alert("확인 후 3초 후에 이 페이지는 종료됩니다.");
+            window.setTimeout(function() { // 시간을 지연시키는 메소드
+                myWindow.close();
+            }, 3000); // ms, 1/0000s, *3000 = 3s
+        }
+        btn4.addEventListener("click", function() {
+            var divTag1 = document.querySelector("#area1");
+            window.setInterval(function() {
+               var data = new Date();
+               divTag1.innerHTML = data.getHours() + " : " + data.getMinutes() + " : " + data.getSeconds();
+            }, 1000);
+        });
+        document.querySelector("#btn-5").onclick = function() { // 고전 이벤트 모델
+            var divTag2 = document.querySelector("#area2");
+            var count = 10;
+            var intervalId = window.setInterval(function() {
+                divTag2.innerHTML = count--; // 1초마다 count를 --
+                window.setTimeout(function() { // 10초후에 clearInterval 실행
+                    clearInterval(intervalId); // Interval을 클리어 하는 메소드
+                }, 10000);
+            }, 1000);
+        };
+        document.getElementById("btn-6").addEventListener("click", function() {
+            console.log("회면 높이 : " + screen.height);
+            console.log("회면 너비 : " + screen.width);
+            console.log(screen);
+        });
+
+        document.querySelector("#btn-7").onclick = function() {
+            console.log(navigator); // user-agent 접속한 브라우저를 알 수 있다.
+        }
+        document.getElementById("btn-8").onclick = function() {
+            console.log(location);
+            location.href = "http://www.daum.net"
+        }
+    </script>
+
+</body>
+</html>

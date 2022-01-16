@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOM Access</title>
+</head>
+<body>
+    <h2>Javascript를 이용한 HTML 태그 접근</h2>
+    <p>자바스크립트를 이용하여 HTML 태그를 동적으로 처리하기 위해서는 DOM객체의
+        메소드를 호출하여 접근해야함.
+        브라우저를 실행하는 순간 DOM객체 형성되고 객체안에 모든 정보가 저장(트리형태).
+    </p>
+    <h3>DOM객체 메소드</h3> 
+    <p>
+        1. getElementById("아이디명") : 태그의 id 속성값을 이용해서 태그 요소 객체정보를 가져옴(1개) <br>
+        2. getElementByName("이름명") : 태그 name 속성값을 이용해서 태그 요소의 객체 정보를 배열에 담아 가져옴(여러개 존재할 수 있음.)<br>
+        3. getElementByTagName("태그명") : 태그명을 이용해서 태그들의 객체 정보를 배열에 담아 가져옴(여러개 존재할 수 있음.)<br>
+    </p>
+    <p id="p11" name="pp">안녕하세요</p>
+    <p id="p22" name="pp">돔객체</p>
+    <p id="p33" name="pp">자바스크립트</p>
+    <script>
+        var pTag1 = document.getElementById("p11");
+        var pTag2 = document.getElementById("p22");
+        console.log(pTag1.innerHTML); // innerHTML : 태그 사이값을 출력
+        pTag1.innerHTML = "새해복많이받으세요"; // 속성값을 js를 통해서 변형해서 출력
+        console.log(pTag2.innerHTML); 
+        pTag2.innerHTML = "내년에 봅시다.";   // 속성값을 js를 통해서 변형해서 출력
+
+        var pTags = document.getElementsByName("pp");
+        console.log(pTags);
+        console.log(pTags[0]);
+        pTags[2].innerHTML = "고생하셨습니다.";
+
+        var pTagSelector1 = document.querySelector("#p11");
+        console.log(pTagSelector1);
+
+        var pTagsSelector2 = documnet.querySelctor("#p22");
+        console.log(pTagsSelector2.innerHTML);
+        
+    </script>
+
+</body>
+</html>
