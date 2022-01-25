@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>회원가입</title>
+</head>
+<body>
+		<h1>회원가입</h1>
+		<h1>회원 정보를 입력하세요</h1>
+		<fieldset>
+				<legend>회원가입</legend>
+				<form action="/member/enroll" method="post">
+					<ul>
+						<li>아이디 : <input type="text" name="user-id" placeholder="아이디를 입력해주세요"></li><br>
+						<li>비밀번호 : <input type="password" name="user-pwd"></li><br>
+						<li>이름 : <input type="text" name="user-name"></li><br>
+						<li>나이 : <input type="text" name="user-age"></li><br>
+						<li>이메일 : <input type="text" name="user-email"></li><br>
+						<li>폰번호 : <input type="text" name="user-phone"></li><br>
+						<li>주소 : <input type="text" name="user-address"></li><br>
+						<li>성별 : <input type="radio" name="gender" value="M">남 
+						<input type="radio" name="gender" value="F">여</li><br>
+						<li>취미 : <input type="text" name="user-hobby"></li><br>
+						<input type="submit" value="가입하기">
+						<input type="reset" value="취소">
+					</ul>
+				</form>	
+</fieldset>
+</body>
+</html>
