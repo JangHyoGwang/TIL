@@ -15,6 +15,4 @@
     
 #### - [Python](https://github.com/JangHyoGwang/TIL/blob/main/Python/Python.md)
 
-# 넥사크로 과정
 
-#### - [Study](https://github.com/JangHyoGwang/TIL/blob/main/%EB%84%A5%EC%82%AC%ED%81%AC%EB%A1%9C/Study.md)
